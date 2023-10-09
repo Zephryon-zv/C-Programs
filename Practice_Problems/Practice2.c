@@ -2,18 +2,17 @@
 
 int main()
 {
-
     float kmToMiles = 0.621371;
     float inchesToFoot = 0.083333;
     float cmsToInches = 0.393701;
     float poundsToKgs = 0.454;
     float inchToMetres = 0.0254;
 
-    // Basic Intro
     printf("\t\nWelcome to the Unit Conversion Program!\n");
     int iterate;
     printf("Run time: ");
     scanf("%d", &iterate);
+
     for (int i = 0; i < iterate; i++)
     {
         printf("Select the following query (1 - 6):- \n");
@@ -25,48 +24,62 @@ int main()
             {"\te> inch to metres"},
             {"\tf> Quit"},
         };
-        printf("Note:\n Don't give unit to values\n");
-        for (int i = 0; i < 6; i++)
+
+        for (int j = 0; j < 6; j++)
         {
-            printf("%s\n", category[i]);
+            printf("%s\n", category[j]);
         }
 
-        // User Input
         char choice;
         printf(">> ");
-        scanf("%c", &choice);
+        scanf(" %c", &choice); // Add a space before %c to consume leading whitespace
 
-        int usr_input;
-        printf("\nEnter the value to convert: ");
-        scanf("%d", &usr_input);
-
-        // Logic
-        switch (choice)
+        if (choice == 'f')
         {
-        case 'a':
-            printf("%f km is equal to %f miles \n",usr_input * kmToMiles);
-            break;
-        case 'b':
-            printf("%f inch is equal to %f feet \n", usr_input * inchesToFoot);
-            break;
-        case 'c':
-            printf("%f cms is equal to %f inches \n", usr_input * cmsToInches);
-            break;
-        case 'd':
-            printf("%f pounds is equal to %f kgs \n", usr_input * poundsToKgs);
-            break;
-        case 'e':
-            printf("%f inches is equal to %f metres \n", usr_input * inchToMetres);
-            break;
-        case 'f':
-            printf("Thanks for running this Program");
-            goto end;
-            break;
-        
-        default:
-            break;
+            printf("Exiting the program.\n");
+            break; // Exit the loop when 'f' is selected
+        }
+
+        else if (choice == 'a')
+        {
+            float num;
+            printf("\nEnter number:- ");
+            scanf("%f", &num);
+            printf("%f miles\n", num * kmToMiles);
+        }
+
+        else if (choice == 'b')
+        {
+            float num;
+            printf("\nEnter number:- ");
+            scanf("%f", &num);
+            printf("%f ft\n", num * inchesToFoot);
+        }
+
+        else if (choice == 'c')
+        {
+            float num;
+            printf("\nEnter number:- ");
+            scanf("%f", &num);
+            printf("%f inch\n", num * cmsToInches);
+        }
+
+        else if (choice == 'd')
+        {
+            float num;
+            printf("\nEnter number:- ");
+            scanf("%f", &num);
+            printf("%f kgs\n", num * poundsToKgs);
+        }
+
+        else if (choice == 'e')
+        {
+            float num;
+            printf("\nEnter number:- ");
+            scanf("%f", &num);
+            printf("%f metres\n", num * inchToMetres);
         }
     }
-end:
+
     return 0;
 }
