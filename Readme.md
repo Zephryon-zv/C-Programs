@@ -1,5 +1,7 @@
 # C Programs Repository
 
+![C Programming](https://cka.collectiva.in/Content/images/CourseImages/9.png)
+
 Welcome to my C Programs Repository! This collection includes various C programs that I have practiced. Whether you're a beginner learning C or an experienced developer looking for examples, feel free to explore the files.
 
 ## Instructions:
