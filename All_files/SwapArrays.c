@@ -7,6 +7,8 @@ void Swap_values(int *x, int *y){
     *x = temp_x;
 }
 
+// void Swap_arrays();
+
 int main(){
     // Program to swap values
     int a = 23;

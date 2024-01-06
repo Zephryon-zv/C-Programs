@@ -25,7 +25,8 @@ void func3(int arrays[2][4]) {
 
 int main() {
     int arr[] = {23,34,65,76};
-    int arrs[][4] = {{1,2,3,4}, {5,6,7,8}};
+    int arrs[][4] = {{1,2,3,4}, 
+                    {5,6,7,8}};
     func1(arr);
     printf("\n");
     func2(arr);
